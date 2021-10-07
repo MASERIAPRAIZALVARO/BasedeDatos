@@ -14,13 +14,14 @@ console.log("hola mundo");
 //creamos variable main que le llamamos main
 let main = () => __awaiter(void 0, void 0, void 0, function* () {
     // async significa que la funcion es asincrona lo cual es necesario para el await
+    let edad;
     const valor = yield (0, entradaTeclado_1.leerTeclado)('Cual es tu edad');
-    let valor2 = parseInt(valor);
-    if (valor2 < 18) {
-        console.log('tienes menos de 18');
+    edad = parseInt(valor);
+    if (edad < 18) {
+        console.log(`tienes menos de 18 porque tienes ${edad}`);
     }
     else {
-        console.log('tienes mas de 18');
+        console.log(`tienes mas de ${edad}`);
     }
 });
 //invocamos la funcion
